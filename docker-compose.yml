@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+ 
+  pyrest:
+    container_name: pyrest
+    restart: always
+    build: .
+    expose:
+      - "5000"
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./core/ngrok_control.py:/usr/src/pyrest/ngrok_control.py
