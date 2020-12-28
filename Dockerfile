@@ -8,11 +8,11 @@ WORKDIR /usr/src/ngrok_api
 
 COPY /core/ ./
 
-Run ./ngrok_install.sh
+RUN ./ngrok_install.sh
 
 RUN pipenv install --deploy --ignore-pipfile
 
-Run rm ngrok_install.sh
+RUN rm ngrok_install.sh
 
 EXPOSE 5000
 
